@@ -1,0 +1,8 @@
+config:
+    damageLowOxygen: 0.5
+    defaultWorld: 'GalaxyWorld'
+    debug: false
+    maxCanFly: 15
+    damageFlyToHigh: 1
+    minOxygenLevelToCaution: 5
+    damageAnimalLowOxygen: 0.5

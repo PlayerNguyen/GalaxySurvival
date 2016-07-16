@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GalaxySurvival_1">
+    <output-path>E:/Minecraft Server Hash/MC_Stream/plugins</output-path>
+    <root id="archive" name="GalaxySurvival_1.jar">
+      <element id="module-output" name="GalaxySurvival" />
+      <element id="file-copy" path="$PROJECT_DIR$/plugin.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/config.yml" />
+    </root>
+  </artifact>
+</component>

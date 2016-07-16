@@ -1,0 +1,19 @@
+name: GalaxySurvival
+version: 1.1
+main: com.playernguyen.GalaxySurvival
+author: Player_Nguyen
+commands:
+    gs:
+        usage: '&3/galaxysurvival: Teleport to galaxy survival'
+        description: Teleport to galaxy survival
+    setgs:
+        usage: '&4/setgs: Set warp to galaxy survival'
+        description: Set warp to galaxy survival
+    galaxysurvival:
+        usage: '&3/galaxysurvival: Teleport to galaxy survival'
+        description: Teleport to galaxy survival
+    gshelp:
+        usage: '&4/gshelp [en/vi]'
+permissions:
+    galaxysurvival.setwarp:
+        default: op
