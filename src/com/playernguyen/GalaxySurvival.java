@@ -8,6 +8,7 @@ import com.playernguyen.listener.OxyBarEvent;
 import com.playernguyen.listener.PlayerEventClass;
 import com.playernguyen.listener.ZombieStyle;
 import com.playernguyen.weapon.WeaponTNTArrow;
+import org.apache.commons.codec.language.bm.Lang;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandExecutor;
@@ -25,27 +26,22 @@ public class GalaxySurvival extends JavaPlugin {
         getConfig().options().copyDefaults(true);
         saveDefaultConfig();
 
+        load (new OxyBarEvent());
+
+
+        load (new PlayerEventClass());
+        load (new ZombieStyle());
+
+        load (new WeaponTNTArrow());
+
+        load ("gs", new GalaxySurvivalCommand());
+        load ("galaxysurvival", new GalaxySurvivalCommand());
+        load ("setgs", new SetGalaxySurvivalCommand());
+        load ("gshelp", new HelpGalaxySurvivalCommand());
+
+        LanguageManager.getInstance().setup();
+
         log(ChatColor.GREEN + "-------------------");
-        log(ChatColor.GREEN + "Loading core....");
-        log(ChatColor.AQUA + "Loading core....DONE");
-        log(ChatColor.GREEN + "Generator World...");
-        log(ChatColor.AQUA + "Loading Generator World....DONE");
-        log(ChatColor.GREEN+ "Loading Oxygen bar...");
-        load(new OxyBarEvent());
-        log(ChatColor.AQUA+ "Loading Oxygen bar...DONE");
-        log(ChatColor.GREEN + "Loading enchantment...");
-        log(ChatColor.AQUA + "Loading enchantment...DONE");
-        log(ChatColor.GREEN + "-------------------");
-
-        load(new PlayerEventClass());
-        load(new ZombieStyle());
-
-        load(new WeaponTNTArrow());
-
-        load("gs", new GalaxySurvivalCommand());
-        load("galaxysurvival", new GalaxySurvivalCommand());
-        load("setgs", new SetGalaxySurvivalCommand());
-        load("gshelp", new HelpGalaxySurvivalCommand());
 
         new BukkitRunnable(){
 

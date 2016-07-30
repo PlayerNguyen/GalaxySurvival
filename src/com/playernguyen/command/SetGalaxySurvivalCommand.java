@@ -16,6 +16,7 @@ public class SetGalaxySurvivalCommand implements CommandExecutor{
             if (commandSender.hasPermission("galaxysurvival.setwarp"))
             {
                 GSWarpManager.getInstance().addWarp(((Player) commandSender).getLocation());
+                commandSender.sendMessage("Warp is set! Now you can teleport to there!");
             } else {
                 commandSender.sendMessage("Don't have permission / Không đủ quyền thực hiện");
             }

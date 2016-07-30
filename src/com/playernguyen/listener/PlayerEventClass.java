@@ -5,11 +5,13 @@ import com.playernguyen.packet.TitlePacket;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
@@ -85,6 +87,12 @@ public class PlayerEventClass  implements Listener {
         else {
             p.setWalkSpeed(0.2f);
         }
+    }
+
+    @EventHandler
+    public void PlayerChatEvents(AsyncPlayerChatEvent event)
+    {
+        event.getPlayer().getWorld().playSound(event.getPlayer().getLocation(), Sound.NOTE_PIANO, 1, 1);
     }
 
 }

@@ -25,6 +25,12 @@ public class LanguageManager {
         }
     }
 
+    public void setup()
+    {
+        if (!f.exists())
+        {save();}
+    }
+
     public void setPlayerLanguage(Player p, GalaxySurvivalLanguage lang)
     {
         cf.set(p+".language", lang.getDomain());

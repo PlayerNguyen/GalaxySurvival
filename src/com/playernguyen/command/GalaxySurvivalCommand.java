@@ -20,7 +20,7 @@ public class GalaxySurvivalCommand implements CommandExecutor
             ((Player) sender).teleport(GSWarpManager.getInstance().getWarp());
             sender.sendMessage(ChatColor.RED + "[CraftVN - Galaxy] Teleport to world.");
             sender.sendMessage(ChatColor.AQUA + "[CraftVN - Galaxy] Use /gshelp to more information.");
-        }   
+        }
         return true;
     }
 
